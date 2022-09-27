@@ -10,11 +10,14 @@ namespace OnOff
             IState<string, Triggers> state;
             
             TwoStateMachine machine = new TwoStateMachine();
-            machine.Fire(Triggers.On);
 
-            state = machine.CurrentState;
-
+            state = machine.Fire(Triggers.On);
             Console.WriteLine(state.Name);
+            Console.WriteLine(state.Data.First());
+
+            state = machine.Fire(Triggers.Off);
+            Console.WriteLine(state.Name);
+            Console.WriteLine(state.Data.First());
         }
     }
 }

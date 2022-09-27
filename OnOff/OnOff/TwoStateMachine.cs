@@ -8,7 +8,10 @@ namespace OnOff
         public TwoStateMachine()
         {
             OffState offState = new OffState();
+            offState.Data.Add("This state is off");
+
             OnState onState = new OnState();
+            onState.Data.Add("This state is on");
 
             States.Add(offState);
             States.Add(onState);
