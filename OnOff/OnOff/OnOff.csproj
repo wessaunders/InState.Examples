@@ -11,6 +11,6 @@
     <None Remove="InState" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="InState" Version="0.1.0" />
+    <PackageReference Include="InState" Version="0.1.1" />
   </ItemGroup>
 </Project>
